@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body * {
+    font-family: "Roboto", sans-serif;
+  }
+
+body {
+    background-color: #121214;
+    background-image: url(../assets/bg.svg);
+    background-position-x: center;          /*Propridade nova*/
+    background-position-y: 55,6%;
+}
+
+.app {
+    width: fit-content;     /*Propridade nova*/
+    margin: 52px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 63px;
+}
+
+#cards {
+    display: flex;
+    gap: 100px;
+}
+
+.card {
+    padding: 32px 23px;
+    width: 300px;
+    text-align: center;
+    background: #1D1C19;
+    border-radius: 6px;
+    border-bottom: 4px solid  #ffbe0b;
+}
+
+.card h2 {
+    display: flex;
+    gap: 16px;              /*Pesquisar*/
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid #ffbe0b;
+    border-radius: 6px;
+    width: fit-content;
+    margin-inline: auto;
+    color: #F7DD43;
+    margin-bottom: 53px;
+    align-items: center;
+}
+
+.card h2 span {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -30px;
+}
+
+.card ul li + li {
+    border-top: 1px solid #323238;
+}
+
+.card ul li strong {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 125px;
+    text-align: center;
+    color: #fff;
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.assinatura > img {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffbe0b;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.assinatura {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.descr {
+    margin-top: 26px;
+}
+.descr h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: #F1F5F9;
+    margin-bottom: -2px;
+}
+
+.descr p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 19px;
+    color: #F1F5F9;
+    text-transform: uppercase;
+}
+
+.card ul li strong:hover,
+.card ul li img:hover{
+    transform: scale(1.1);
+}
+
+.card ul li strong,
+.card ul li img{
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.assinatura img:hover,
+.assinatura h2:hover{
+    transform: scale(1.1);
+}
+.assinatura img,
+.assinatura h2{
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card {
+    animation: appear 0.1s;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 400px){
+    #cards {
+        flex-direction: row;
+    }
+}
